@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a react coding challenge from [https://github.com/DemandHub/react-coding-challenge].
+_NOTE due to Unsplash's limited API requests, this application simply reloads the same images to demonstrate the infinite scroll_
+
 
 ## Available Scripts
 
