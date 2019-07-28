@@ -1,0 +1,9 @@
+.ImageGrid-root {
+  background-color: #464D59;
+  display: flex;
+  align-items: center;
+  min-height: 50vh;
+  color: white;
+  justify-content: center;
+
+}
