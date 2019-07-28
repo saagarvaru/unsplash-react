@@ -25,8 +25,8 @@ class ImageGrid extends React.Component {
     console.log(this.state);
   }
 
+  // See ImageGridProvider.js for API implmentation
   fetchData() {
-    console.log('loading more');
     let newList = this.state.images.concat(photos);
     this.setState({
       page: this.state.page + 1,
@@ -46,7 +46,6 @@ class ImageGrid extends React.Component {
       isOpen: false
     })
   }
-
 
 
   render() {
