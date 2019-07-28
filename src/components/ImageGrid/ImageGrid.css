@@ -1,9 +1,45 @@
 .ImageGrid-root {
   background-color: #464D59;
-  display: flex;
-  align-items: center;
+
+
   min-height: 50vh;
   color: white;
-  justify-content: center;
 
+}
+
+
+.imagesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.image {
+  padding: 8px;
+}
+
+.image img {
+  display: flex;
+  max-width: 100%;
+  max-height: 600px;
+}
+.image img:hover {
+
+  cursor: pointer;
+}
+
+.image img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
 }
