@@ -1,13 +1,21 @@
 import React from 'react'
 
-import './ImageGrid.css'
+// Components
+import ImageComponent from './ImageComponent'
 
+
+// Provider function
 import { getImages } from './ImageGridProvider'
 
+// Styles
+import './ImageGrid.css'
+
+// Plugins
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
- import InfiniteScroll from 'react-infinite-scroll-component';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
+// Data
 import photos from './photos.json'
 
 class ImageGrid extends React.Component {
@@ -53,7 +61,7 @@ class ImageGrid extends React.Component {
     const { isOpen, selectedIndex, images } = this.state;
     var imageElements = this.state.images.map((element, index) => {
       return (
-        <Image
+        <ImageComponent
           click={this.openLightBox.bind(this, element, index)}
           key={index}
           data={element}
@@ -100,13 +108,3 @@ class ImageGrid extends React.Component {
 }
 
 export default ImageGrid
-
-
-const Image = (props) => {
-  var { data } = props;
-  return (
-    <div className='image' onClick={() => props.click()}>
-      <img alt='this is a cool photo' src={data.urls.regular}/>
-    </div>
-  )
-}
